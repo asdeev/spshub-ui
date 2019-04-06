@@ -1,6 +1,6 @@
-# Product Page
+# Somali Professionals & Students Hub (spshub)
 
-Product Page is a [Vue.js](https://vuejs.org/) application developed to be an online store.
+spshub is an application developed for Somali professionals and students to find mentorship. The application has been developed with [Vue.js](https://vuejs.org/).
 
 ## Installation
 
@@ -75,4 +75,4 @@ Zaid Bhura - [Asdeev](https://github.com/asdeev)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/asdeev/product-page/blob/master/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/asdeev/spshub/blob/master/LICENSE.md) file for details.
