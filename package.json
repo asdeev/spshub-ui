@@ -1,7 +1,7 @@
 {
   "name": "spshub",
   "version": "1.0.0",
-  "description": "spshub is an application developed for Somali professionals and students to find mentorship.",
+  "description": "SPSHub is an application developed for Somali professionals and students to find mentorship.",
   "main": "index.html",
   "private": true,
   "browserslist": [

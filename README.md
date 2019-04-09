@@ -1,6 +1,6 @@
-# Somali Professionals & Students Hub (spshub)
+# Somali Professionals & Students Hub (SPSHub)
 
-spshub is an application developed for Somali professionals and students to find mentorship. The application has been developed with [Vue.js](https://vuejs.org/).
+SPSHub is an application developed for Somali professionals and students to find mentorship. The application has been developed with [Vue.js](https://vuejs.org/).
 
 ## Installation
 
@@ -67,7 +67,13 @@ npm run test:e2e
 
 ## Deployment
 
-TODO
+```bash
+docker build -t spshub/app
+docker run -d -p 8080:80 --rm --name spshub-client
+
+# Expose the IP address to connect
+docker-machine ip
+```
 
 ## Authors
 
