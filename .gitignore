@@ -84,3 +84,4 @@ dist/
 
 # Everything else
 *.pdf
+*gcp_creds.json
