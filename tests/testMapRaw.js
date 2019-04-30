@@ -1,7 +1,5 @@
-// import components here
-import App from '~/src/App';
+import App from '@/App';
 
-// export components here
-export default {
-  App
+export default { 
+ App,
 };

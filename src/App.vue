@@ -1,9 +1,13 @@
 <template>
-  <div>Hello World!</div>
+  <!-- vue:test -->
+  <v-app> </v-app>
 </template>
 
 <script>
 export default {
+  data() {
+    return {};
+  },
   name: 'App'
 };
 </script>
