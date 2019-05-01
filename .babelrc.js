@@ -5,7 +5,7 @@ module.exports = {
       {
         paths: [
           {
-            rootPathPrefix: '@',
+            rootPathPrefix: '~',
             rootPathSuffix: 'src'
           },
           {

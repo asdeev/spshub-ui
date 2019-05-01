@@ -23,7 +23,7 @@ def map_vue_components(logger=None, component_files=None, output_file=None):
             file_export = "\nexport default { \n"
 
             for file_name, file_path in component_files.items():
-                file_import = f"import {file_name} from '@/{file_path}';\n"
+                file_import = f"import {file_name} from '~/{file_path}';\n"
                 file_export += f" {file_name},\n"
                 out.write(file_import)
             file_export += "};\n"

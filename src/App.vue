@@ -1,10 +1,17 @@
 <template>
   <!-- vue:test -->
-  <v-app> </v-app>
+  <v-app>
+    <AppNavigation></AppNavigation>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script>
+import AppNavigation from '~/components/AppNavigation';
 export default {
+  components: {
+    AppNavigation
+  },
   data() {
     return {};
   },
