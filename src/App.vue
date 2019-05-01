@@ -1,7 +1,7 @@
 <template>
   <!-- vue:test -->
   <v-app>
-    <AppNavigation></AppNavigation>
+    <AppNavigation :pages="pages"></AppNavigation>
     <router-view></router-view>
   </v-app>
 </template>
@@ -13,7 +13,9 @@ export default {
     AppNavigation
   },
   data() {
-    return {};
+    return {
+      pages: []
+    };
   },
   name: 'App'
 };

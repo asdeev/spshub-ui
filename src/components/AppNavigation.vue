@@ -5,6 +5,13 @@
 
 <script>
 export default {
-  name: 'AppNavigation'
+  name: 'AppNavigation',
+  props: {
+    pages: {
+      type: Array,
+      required: true,
+      default: () => []
+    }
+  }
 };
 </script>
