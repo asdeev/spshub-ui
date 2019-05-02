@@ -3,9 +3,9 @@ import { expect } from 'chai';
 import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import Vuex from 'vuex';
+import initialState from '~/store/state';
 import testMap from '../../testMap';
-// import initialState  from '~/store/state';
-// import somethingFixture from './fixtures/something';
+import navigationFixture from './fixtures/navigation';
 
 const localVue = createLocalVue();
 localVue.use(Vuex);
@@ -18,10 +18,7 @@ describe('App', () => {
   const build = () => {
     const wrapper = shallowMount(testMap.App, {
       localVue,
-      store: new Vuex.Store({ state }),
-      data: () => ({
-        pages: []
-      })
+      store: new Vuex.Store({ state })
     });
 
     return {
@@ -30,9 +27,10 @@ describe('App', () => {
     };
   };
 
-  // beforeEach(() => {
-  //   state = { ...initialState }
-  // });
+  beforeEach(() => {
+    // reset the state variable with copy of our original state file
+    state = { ...initialState };
+  });
 
   it('renders the component', () => {
     const { wrapper } = build();
@@ -46,26 +44,12 @@ describe('App', () => {
     expect(appNavigation().exists()).to.be.true;
   });
 
-  it('passes a bound pages array property to app navigation component', () => {
-    const { wrapper, appNavigation } = build();
+  it('passes a bound navigation data object to app navigation component', () => {
+    // set our local state with real sample data
+    state.navigation = navigationFixture;
 
-    // state.something = somethingFixture;
+    const { appNavigation } = build();
 
-    wrapper.setData({
-      pages: [
-        {
-          id: 0,
-          name: 'home',
-          page: '/'
-        },
-        {
-          id: 1,
-          name: 'about',
-          page: '/about'
-        }
-      ]
-    });
-
-    expect(appNavigation().vm.pages).to.eql(wrapper.vm.pages);
+    expect(appNavigation().vm.navigation).to.eql(state.navigation);
   });
 });

@@ -1,21 +1,22 @@
 <template>
   <!-- vue:test -->
   <v-app>
-    <AppNavigation :pages="pages"></AppNavigation>
+    <AppNavigation :navigation="navigation"></AppNavigation>
     <router-view></router-view>
   </v-app>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import AppNavigation from '~/components/AppNavigation';
 export default {
   components: {
     AppNavigation
   },
-  data() {
-    return {
-      pages: []
-    };
+  computed: {
+    ...mapState({
+      navigation: 'navigation'
+    })
   },
   name: 'App'
 };

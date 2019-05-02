@@ -7,10 +7,10 @@
 export default {
   name: 'AppNavigation',
   props: {
-    pages: {
-      type: Array,
+    navigation: {
+      type: Object,
       required: true,
-      default: () => []
+      default: () => ({})
     }
   }
 };
