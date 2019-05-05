@@ -1,6 +1,5 @@
 // inject sass entry point for Parcel bundling
 import '#/styles/main.scss';
-import 'material-design-icons-iconfont/dist/material-design-icons.css';
 // import Vue specific components
 import Vue from 'vue';
 import Vuetify from 'vuetify';
@@ -11,9 +10,9 @@ import router from './router';
 import store from './store/index';
 
 Vue.use(Vuetify, {
-  iconfont: 'md',
+  iconfont: 'fa',
   theme: {
-    primary: colors.amber.darken1,
+    primary: colors.teal.darken1,
     secondary: colors.deepPurple.darken2,
     accent: colors.green.base,
     error: colors.red.darken1,

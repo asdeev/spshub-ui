@@ -3,32 +3,32 @@ import { expect } from 'chai';
 import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import testMap from '../../testMap';
-import navigation from './fixtures/navigation';
+import footer from './fixtures/footer';
 
 const localVue = createLocalVue();
 localVue.use(Router);
 localVue.use(Vuetify);
 
-describe('AppNavigation', () => {
+describe('AppFooter', () => {
   let props;
 
   const build = () => {
-    const wrapper = shallowMount(testMap.AppNavigation, {
+    const wrapper = shallowMount(testMap.AppFooter, {
       localVue,
       propsData: props
     });
 
     return {
       wrapper,
-      toolbar: () => wrapper.find('.app-navigation__toolbar'),
-      toolbarIcon: () => wrapper.find('.app-navigation__icon'),
-      pages: () => wrapper.find('.app-navigation__pages')
+      socialMedia: () => wrapper.find('.app-footer__social-media'),
+      subheading: () => wrapper.find('.app-footer__subheading'),
+      copyright: () => wrapper.find('.app-footer__copyright')
     };
   };
 
   beforeEach(() => {
     props = {
-      navigation
+      footer
     };
   });
 
@@ -39,11 +39,11 @@ describe('AppNavigation', () => {
   });
 
   it('renders the main components', () => {
-    const { toolbar, toolbarIcon, pages } = build();
+    const { socialMedia, subheading, copyright } = build();
 
-    expect(toolbar().exists()).to.be.true;
-    expect(toolbarIcon().exists()).to.be.true;
+    expect(socialMedia().exists()).to.be.true;
+    expect(subheading().exists()).to.be.true;
 
-    expect(pages().exists()).to.be.true;
+    expect(copyright().exists()).to.be.true;
   });
 });

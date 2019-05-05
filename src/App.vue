@@ -3,19 +3,24 @@
   <v-app>
     <AppNavigation :navigation="navigation"></AppNavigation>
     <router-view></router-view>
+    <AppFooter :footer="footer"></AppFooter>
   </v-app>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import AppNavigation from '~/components/AppNavigation';
+import AppFooter from '~/components/AppFooter';
+
 export default {
   components: {
-    AppNavigation
+    AppNavigation,
+    AppFooter
   },
   computed: {
     ...mapState({
-      navigation: 'navigation'
+      navigation: 'navigation',
+      footer: 'footer'
     })
   },
   name: 'App'

@@ -5,6 +5,7 @@ import Vuetify from 'vuetify';
 import Vuex from 'vuex';
 import initialState from '~/store/state';
 import testMap from '../../testMap';
+import footerFixture from './fixtures/footer';
 import navigationFixture from './fixtures/navigation';
 
 const localVue = createLocalVue();
@@ -23,7 +24,8 @@ describe('App', () => {
 
     return {
       wrapper,
-      appNavigation: () => wrapper.find(testMap.AppNavigation)
+      appNavigation: () => wrapper.find(testMap.AppNavigation),
+      appFooter: () => wrapper.find(testMap.AppFooter)
     };
   };
 
@@ -39,17 +41,20 @@ describe('App', () => {
   });
 
   it('renders the main child components', () => {
-    const { appNavigation } = build();
+    const { appNavigation, appFooter } = build();
 
     expect(appNavigation().exists()).to.be.true;
+    expect(appFooter().exists()).to.be.true;
   });
 
-  it('passes a bound navigation data object to app navigation component', () => {
+  it('passes a bound data object to app components', () => {
     // set our local state with real sample data
     state.navigation = navigationFixture;
+    state.footer = footerFixture;
 
-    const { appNavigation } = build();
+    const { appNavigation, appFooter } = build();
 
     expect(appNavigation().vm.navigation).to.eql(state.navigation);
+    expect(appFooter().vm.footer).to.eql(state.footer);
   });
 });
