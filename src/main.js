@@ -12,13 +12,13 @@ import store from './store/index';
 Vue.use(Vuetify, {
   iconfont: 'fa',
   theme: {
-    primary: colors.teal.darken1,
-    secondary: colors.deepPurple.darken2,
-    accent: colors.green.base,
-    error: colors.red.darken1,
-    warning: colors.orange.darken1,
-    info: colors.lightBlue.darken1,
-    success: colors.indigo.darken1
+    primary1: colors.green.darken2,
+    secondary1: colors.teal.base,
+    primary2: colors.purple.base,
+    secondary2: colors.deepPurple.base,
+    accent: colors.blue.darken1,
+    info1: colors.lightBlue.darken1,
+    info2: colors.lightGreen.darken1
   }
 });
 

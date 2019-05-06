@@ -2,7 +2,7 @@
   <!-- vue:test -->
   <v-footer height="auto">
     <v-card class="flex" flat tile>
-      <v-card-title class="app-footer__social-media primary">
+      <v-card-title class="app-footer__social-media primary2">
         <strong class="app-footer__subheading subheading white--text"
           >Get connected with us on social media!</strong
         >
@@ -22,7 +22,7 @@
       <v-card-actions
         class="app-footer__copyright secondary white--text justify-end"
       >
-        SPSHub {{ new Date().getFullYear() }}
+        {{ footer.name }} {{ new Date().getFullYear() }}
       </v-card-actions>
     </v-card>
   </v-footer>

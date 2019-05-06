@@ -1,7 +1,6 @@
 <template>
   <!-- vue:test -->
   <v-toolbar class="app-navigation__toolbar">
-    <v-toolbar-side-icon class="app-navigation__icon">+</v-toolbar-side-icon>
     <v-toolbar-items class="app-navigation__pages">
       <v-btn
         v-for="item in navigation.pages"

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeRoute renders the component 1`] = `"<v-carousel-stub activeclass=\\"v-item--active\\" mandatory=\\"true\\" cycle=\\"true\\" delimitericon=\\"$vuetify.icons.delimiter\\" height=\\"500\\" interval=\\"6000\\" nexticon=\\"$vuetify.icons.next\\" previcon=\\"$vuetify.icons.prev\\" class=\\"home-route__carousel\\"></v-carousel-stub>"`;

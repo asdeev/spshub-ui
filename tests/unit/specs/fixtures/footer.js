@@ -2,25 +2,25 @@ export default {
   links: [
     {
       id: 0,
-      name: 'facebook',
+      name: 'Facebook',
       link: 'link',
       icon: 'fab fa-facebook'
     },
     {
       id: 1,
-      name: 'twitter',
+      name: 'Twitter',
       link: 'link',
       icon: 'fab fa-twitter'
     },
     {
       id: 2,
-      name: 'instagram',
+      name: 'Instagram',
       link: 'link',
       icon: 'fab fa-instagram'
     },
     {
       id: 3,
-      name: 'youtube',
+      name: 'YouTube',
       link: 'link',
       icon: 'fab fa-youtube'
     }

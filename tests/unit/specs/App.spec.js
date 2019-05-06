@@ -6,6 +6,7 @@ import Vuex from 'vuex';
 import initialState from '~/store/state';
 import testMap from '../../testMap';
 import footerFixture from './fixtures/footer';
+import headerFixture from './fixtures/header';
 import navigationFixture from './fixtures/navigation';
 
 const localVue = createLocalVue();
@@ -24,6 +25,7 @@ describe('App', () => {
 
     return {
       wrapper,
+      appHeader: () => wrapper.find(testMap.AppHeader),
       appNavigation: () => wrapper.find(testMap.AppNavigation),
       appFooter: () => wrapper.find(testMap.AppFooter)
     };
@@ -41,19 +43,22 @@ describe('App', () => {
   });
 
   it('renders the main child components', () => {
-    const { appNavigation, appFooter } = build();
+    const { appHeader, appNavigation, appFooter } = build();
 
+    expect(appHeader().exists()).to.be.true;
     expect(appNavigation().exists()).to.be.true;
     expect(appFooter().exists()).to.be.true;
   });
 
   it('passes a bound data object to app components', () => {
     // set our local state with real sample data
+    state.header = headerFixture;
     state.navigation = navigationFixture;
     state.footer = footerFixture;
 
-    const { appNavigation, appFooter } = build();
+    const { appHeader, appNavigation, appFooter } = build();
 
+    expect(appHeader().vm.header).to.eql(state.header);
     expect(appNavigation().vm.navigation).to.eql(state.navigation);
     expect(appFooter().vm.footer).to.eql(state.footer);
   });

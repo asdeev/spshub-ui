@@ -1,12 +1,10 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { expect } from 'chai';
-import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import testMap from '../../testMap';
 import footer from './fixtures/footer';
 
 const localVue = createLocalVue();
-localVue.use(Router);
 localVue.use(Vuetify);
 
 describe('AppFooter', () => {

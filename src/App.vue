@@ -1,6 +1,7 @@
 <template>
   <!-- vue:test -->
   <v-app>
+    <span><AppHeader :header="header"></AppHeader></span>
     <AppNavigation :navigation="navigation"></AppNavigation>
     <router-view></router-view>
     <AppFooter :footer="footer"></AppFooter>
@@ -9,16 +10,19 @@
 
 <script>
 import { mapState } from 'vuex';
+import AppHeader from '~/components/AppHeader';
 import AppNavigation from '~/components/AppNavigation';
 import AppFooter from '~/components/AppFooter';
 
 export default {
   components: {
+    AppHeader,
     AppNavigation,
     AppFooter
   },
   computed: {
     ...mapState({
+      header: 'header',
       navigation: 'navigation',
       footer: 'footer'
     })

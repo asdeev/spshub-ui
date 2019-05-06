@@ -1,4 +1,10 @@
 export default {
+  header: {
+    name: 'SPSHub',
+    title: 'Somali Professionals & Students Hub',
+    button1: 'Contact Us',
+    button2: 'Join SPSHub Today'
+  },
   navigation: {
     pages: [
       {
@@ -10,11 +16,17 @@ export default {
         id: 1,
         name: 'about',
         page: '/about'
+      },
+      {
+        id: 2,
+        name: 'events',
+        page: '/events'
       }
     ],
     icon: 'path-to-icon'
   },
   footer: {
+    name: 'SPSHub',
     links: [
       {
         id: 0,
@@ -36,7 +48,7 @@ export default {
       },
       {
         id: 3,
-        name: 'youtube',
+        name: 'YouTube',
         link: 'link12',
         icon: 'fab fa-youtube'
       }

@@ -3,31 +3,32 @@ import { expect } from 'chai';
 import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import testMap from '../../testMap';
-import navigation from './fixtures/navigation';
+import header from './fixtures/header';
 
 const localVue = createLocalVue();
 localVue.use(Router);
 localVue.use(Vuetify);
 
-describe('AppNavigation', () => {
+describe('AppHeader', () => {
   let props;
 
   const build = () => {
-    const wrapper = shallowMount(testMap.AppNavigation, {
+    const wrapper = shallowMount(testMap.AppHeader, {
       localVue,
       propsData: props
     });
 
     return {
       wrapper,
-      toolbar: () => wrapper.find('.app-navigation__toolbar'),
-      pages: () => wrapper.find('.app-navigation__pages')
+      title: () => wrapper.find('.app-header__title'),
+      contactButton: () => wrapper.find('.app-header__contact-button'),
+      joinButton: () => wrapper.find('.app-header__join-button')
     };
   };
 
   beforeEach(() => {
     props = {
-      navigation
+      header
     };
   });
 
@@ -38,9 +39,10 @@ describe('AppNavigation', () => {
   });
 
   it('renders the main child components', () => {
-    const { toolbar, pages } = build();
+    const { title, contactButton, joinButton } = build();
 
-    expect(toolbar().exists()).to.be.true;
-    expect(pages().exists()).to.be.true;
+    expect(title().exists()).to.be.true;
+    expect(contactButton().exists()).to.be.true;
+    expect(joinButton().exists()).to.be.true;
   });
 });
