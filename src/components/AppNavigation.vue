@@ -3,6 +3,7 @@
   <v-toolbar class="app-navigation__toolbar">
     <v-toolbar-items class="app-navigation__pages">
       <v-btn
+        class="app-navigation__links"
         v-for="item in navigation.pages"
         flat
         :to="item.page"

@@ -1,12 +1,10 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { expect } from 'chai';
-import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import testMap from '../../testMap';
 import navigation from './fixtures/navigation';
 
 const localVue = createLocalVue();
-localVue.use(Router);
 localVue.use(Vuetify);
 
 describe('AppNavigation', () => {
@@ -21,7 +19,8 @@ describe('AppNavigation', () => {
     return {
       wrapper,
       toolbar: () => wrapper.find('.app-navigation__toolbar'),
-      pages: () => wrapper.find('.app-navigation__pages')
+      pages: () => wrapper.find('.app-navigation__pages'),
+      navigationArray: () => wrapper.findAll('.app-navigation__links')
     };
   };
 
@@ -42,5 +41,15 @@ describe('AppNavigation', () => {
 
     expect(toolbar().exists()).to.be.true;
     expect(pages().exists()).to.be.true;
+  });
+
+  it('renders the navigation bar links correctly', () => {
+    const { navigationArray } = build();
+
+    const home = navigationArray().at(0);
+    expect(home.text()).to.be.equal('home');
+
+    const events = navigationArray().at(2);
+    expect(events.text()).to.be.equal('events');
   });
 });

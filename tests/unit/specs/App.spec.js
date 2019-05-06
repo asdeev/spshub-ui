@@ -13,6 +13,7 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 localVue.use(Router);
 localVue.use(Vuetify);
+const router = new Router();
 
 describe('App', () => {
   let state;
@@ -20,6 +21,7 @@ describe('App', () => {
   const build = () => {
     const wrapper = shallowMount(testMap.App, {
       localVue,
+      router,
       store: new Vuex.Store({ state })
     });
 
@@ -42,6 +44,12 @@ describe('App', () => {
     expect(wrapper.html()).to.matchSnapshot();
   });
 
+  it('loads the default path before redirection', () => {
+    const { wrapper } = build();
+
+    expect(wrapper.vm.$route.path).to.equal('/');
+  });
+
   it('renders the main child components', () => {
     const { appHeader, appNavigation, appFooter } = build();
 
@@ -50,7 +58,7 @@ describe('App', () => {
     expect(appFooter().exists()).to.be.true;
   });
 
-  it('passes a bound data object to app components', () => {
+  it('passes a bound data object to child components', () => {
     // set our local state with real sample data
     state.header = headerFixture;
     state.navigation = navigationFixture;

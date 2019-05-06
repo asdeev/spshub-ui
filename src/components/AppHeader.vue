@@ -1,8 +1,8 @@
 <template>
   <!-- vue:test -->
   <v-card class="flex" flat tile>
-    <v-card-title class="app-header__title primary1">
-      <div class="title white--text">{{ header.title }}</div>
+    <v-card-title class="primary1">
+      <div class="app-header__title title white--text">{{ header.title }}</div>
       <v-spacer></v-spacer>
       <v-btn class="app-header__contact-button" color="info1 white--text">{{
         header.button1

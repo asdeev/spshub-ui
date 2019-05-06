@@ -1,12 +1,10 @@
 import { createLocalVue, shallowMount } from '@vue/test-utils';
 import { expect } from 'chai';
-import Router from 'vue-router';
 import Vuetify from 'vuetify';
 import testMap from '../../testMap';
 import header from './fixtures/header';
 
 const localVue = createLocalVue();
-localVue.use(Router);
 localVue.use(Vuetify);
 
 describe('AppHeader', () => {
@@ -42,7 +40,12 @@ describe('AppHeader', () => {
     const { title, contactButton, joinButton } = build();
 
     expect(title().exists()).to.be.true;
+    expect(title().text()).to.be.equal(props.header.title);
+
     expect(contactButton().exists()).to.be.true;
+    expect(contactButton().text()).to.be.equal(props.header.button1);
+
     expect(joinButton().exists()).to.be.true;
+    expect(joinButton().text()).to.be.equal(props.header.button2);
   });
 });

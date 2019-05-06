@@ -20,7 +20,8 @@ describe('AppFooter', () => {
       wrapper,
       socialMedia: () => wrapper.find('.app-footer__social-media'),
       subheading: () => wrapper.find('.app-footer__subheading'),
-      copyright: () => wrapper.find('.app-footer__copyright')
+      copyright: () => wrapper.find('.app-footer__copyright'),
+      socialMediaArray: () => wrapper.findAll('.app-footer__links')
     };
   };
 
@@ -36,12 +37,30 @@ describe('AppFooter', () => {
     expect(wrapper.html()).to.matchSnapshot();
   });
 
-  it('renders the main components', () => {
+  it('renders the main child components', () => {
     const { socialMedia, subheading, copyright } = build();
 
     expect(socialMedia().exists()).to.be.true;
+
     expect(subheading().exists()).to.be.true;
+    expect(subheading().text()).to.be.equal(
+      'Get connected with us on social media!'
+    );
 
     expect(copyright().exists()).to.be.true;
+    expect(copyright().text()).to.be.equal(
+      `SPSHub ${new Date().getFullYear()}`
+    );
+  });
+
+  it('renders the social media links correctly', () => {
+    const { socialMediaArray } = build();
+
+    const facebook = socialMediaArray().at(0);
+
+    const youtube = socialMediaArray().at(3);
+
+    expect(facebook.attributes().href).to.be.equal('facebook-link');
+    expect(youtube.attributes().href).to.be.equal('youtube-link');
   });
 });

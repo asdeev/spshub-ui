@@ -22,34 +22,34 @@ export default {
         name: 'events',
         page: '/events'
       }
-    ],
-    icon: 'path-to-icon'
+    ]
   },
   footer: {
+    subheading: 'Get connected with us on social media!',
     name: 'SPSHub',
     links: [
       {
         id: 0,
         name: 'Facebook',
-        link: 'link12',
+        link: 'facebook-link',
         icon: 'fab fa-facebook'
       },
       {
         id: 1,
         name: 'Twitter',
-        link: 'link12',
+        link: 'twitter-link',
         icon: 'fab fa-twitter'
       },
       {
         id: 2,
         name: 'Instagram',
-        link: 'link12',
+        link: 'instagram-link',
         icon: 'fab fa-instagram'
       },
       {
         id: 3,
         name: 'YouTube',
-        link: 'link12',
+        link: 'youtube-link',
         icon: 'fab fa-youtube'
       }
     ]

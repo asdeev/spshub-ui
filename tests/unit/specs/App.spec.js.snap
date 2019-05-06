@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders the component 1`] = `"<v-app-stub id=\\"app\\"><span><appheader-stub header=\\"[object Object]\\"></appheader-stub></span> <appnavigation-stub navigation=\\"[object Object]\\"></appnavigation-stub> <router-view-stub name=\\"default\\"></router-view-stub> <appfooter-stub footer=\\"[object Object]\\"></appfooter-stub></v-app-stub>"`;
+exports[`App renders the component 1`] = `"<v-app-stub id=\\"app\\"><appheader-stub header=\\"[object Object]\\"></appheader-stub> <appnavigation-stub navigation=\\"[object Object]\\"></appnavigation-stub> <router-view-stub name=\\"default\\"></router-view-stub> <appfooter-stub footer=\\"[object Object]\\"></appfooter-stub></v-app-stub>"`;

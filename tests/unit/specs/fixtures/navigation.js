@@ -15,6 +15,5 @@ export default {
       name: 'events',
       page: '/events'
     }
-  ],
-  icon: 'path-to-image'
+  ]
 };

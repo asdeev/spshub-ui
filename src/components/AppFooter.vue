@@ -3,16 +3,16 @@
   <v-footer height="auto">
     <v-card class="flex" flat tile>
       <v-card-title class="app-footer__social-media primary2">
-        <strong class="app-footer__subheading subheading white--text"
-          >Get connected with us on social media!</strong
-        >
+        <strong class="app-footer__subheading subheading white--text">{{
+          footer.subheading
+        }}</strong>
         <v-spacer></v-spacer>
         <v-btn
           v-for="item in footer.links"
           :key="item.id"
           :href="item.link"
           target="_blank"
-          class="mx-3"
+          class="app-footer__links mx-3"
           dark
           icon
         >

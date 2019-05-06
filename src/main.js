@@ -10,7 +10,7 @@ import router from './router';
 import store from './store/index';
 
 Vue.use(Vuetify, {
-  iconfont: 'fa',
+  iconfont: 'fa4',
   theme: {
     primary1: colors.green.darken2,
     secondary1: colors.teal.base,

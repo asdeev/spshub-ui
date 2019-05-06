@@ -1,7 +1,7 @@
 <template>
   <!-- vue:test -->
   <v-app>
-    <span><AppHeader :header="header"></AppHeader></span>
+    <AppHeader :header="header"></AppHeader>
     <AppNavigation :navigation="navigation"></AppNavigation>
     <router-view></router-view>
     <AppFooter :footer="footer"></AppFooter>
