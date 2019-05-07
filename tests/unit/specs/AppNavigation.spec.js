@@ -20,7 +20,7 @@ describe('AppNavigation', () => {
       wrapper,
       toolbar: () => wrapper.find('.app-navigation__toolbar'),
       pages: () => wrapper.find('.app-navigation__pages'),
-      navigationArray: () => wrapper.findAll('.app-navigation__links')
+      linksArray: () => wrapper.findAll('.app-navigation__links')
     };
   };
 
@@ -44,12 +44,12 @@ describe('AppNavigation', () => {
   });
 
   it('renders the navigation bar links correctly', () => {
-    const { navigationArray } = build();
+    const { linksArray } = build();
 
-    const home = navigationArray().at(0);
+    const home = linksArray().at(0);
     expect(home.text()).to.be.equal('home');
 
-    const events = navigationArray().at(2);
+    const events = linksArray().at(2);
     expect(events.text()).to.be.equal('events');
   });
 });

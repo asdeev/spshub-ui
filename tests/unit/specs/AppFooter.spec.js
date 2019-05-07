@@ -21,7 +21,7 @@ describe('AppFooter', () => {
       socialMedia: () => wrapper.find('.app-footer__social-media'),
       subheading: () => wrapper.find('.app-footer__subheading'),
       copyright: () => wrapper.find('.app-footer__copyright'),
-      socialMediaArray: () => wrapper.findAll('.app-footer__links')
+      linksArray: () => wrapper.findAll('.app-footer__links')
     };
   };
 
@@ -54,11 +54,10 @@ describe('AppFooter', () => {
   });
 
   it('renders the social media links correctly', () => {
-    const { socialMediaArray } = build();
+    const { linksArray } = build();
 
-    const facebook = socialMediaArray().at(0);
-
-    const youtube = socialMediaArray().at(3);
+    const facebook = linksArray().at(0);
+    const youtube = linksArray().at(3);
 
     expect(facebook.attributes().href).to.be.equal('facebook-link');
     expect(youtube.attributes().href).to.be.equal('youtube-link');
