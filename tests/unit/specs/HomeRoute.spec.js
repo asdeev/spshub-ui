@@ -10,20 +10,19 @@ const localVue = createLocalVue();
 localVue.use(Vuex);
 localVue.use(Vuetify);
 
-// TODO: Fix failing tests
 describe('HomeRoute', () => {
   let state;
 
   const build = () => {
     const wrapper = shallowMount(testMap.HomeRoute, {
       localVue,
-      state: new Vuex.Store({ state })
+      store: new Vuex.Store({ state })
     });
 
     return {
       wrapper,
       carousel: () => wrapper.find('.home-route__carousel'),
-      imagesArray: () => wrapper.find('.home-route__images')
+      imagesArray: () => wrapper.findAll('.home-route__images')
     };
   };
 
