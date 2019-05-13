@@ -20,7 +20,10 @@ describe('AppNavigation', () => {
       wrapper,
       toolbar: () => wrapper.find('.app-navigation__toolbar'),
       pages: () => wrapper.find('.app-navigation__pages'),
-      linksArray: () => wrapper.findAll('.app-navigation__links')
+      linksArray: () => wrapper.findAll('.app-navigation__links'),
+      sublinksMenuArray: () =>
+        wrapper.findAll('.app-navigation__sublinks-menu'),
+      sublinksArray: () => wrapper.findAll('.app-navigation__sublinks')
     };
   };
 
@@ -49,7 +52,24 @@ describe('AppNavigation', () => {
     const home = linksArray().at(0);
     expect(home.text()).to.be.equal('home');
 
-    const events = linksArray().at(2);
+    const events = linksArray().at(1);
     expect(events.text()).to.be.equal('events');
+  });
+
+  it('renders the navigation sublinks menu correctly', () => {
+    const { sublinksMenuArray } = build();
+
+    const about = sublinksMenuArray().at(0);
+    expect(about.text()).to.be.equal('about');
+  });
+
+  it('renders the navigation sublinks correctly', () => {
+    const { sublinksArray } = build();
+
+    const missionAndVision = sublinksArray().at(0);
+    expect(missionAndVision.text()).to.be.equal('Mission & Vision');
+
+    const team = sublinksArray().at(1);
+    expect(team.text()).to.be.equal('Team');
   });
 });

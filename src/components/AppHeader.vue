@@ -8,8 +8,8 @@
         class="app-header__contact-button"
         color="info1 white--text"
         :to="header.button1Link"
-        >{{ header.button1 }}</v-btn
-      >
+        >{{ header.button1 }}&nbsp<i class="far fa-paper-plane"></i
+      ></v-btn>
       <v-btn
         class="app-header__join-button"
         color="info2 white--text"

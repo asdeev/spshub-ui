@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MissionAndVisionRoute renders the component 1`] = `
+"<div> Mission And Vision Route
+</div>"
+`;

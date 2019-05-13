@@ -7,6 +7,8 @@ import ContactUsRoute from '~/pages/ContactUsRoute';
 import EventsRoute from '~/pages/EventsRoute';
 import HomeRoute from '~/pages/HomeRoute';
 import JoinSPSHubRoute from '~/pages/JoinSPSHubRoute';
+import MissionAndVisionRoute from '~/pages/MissionAndVisionRoute';
+import TeamRoute from '~/pages/TeamRoute';
 
 export default { 
  App,
@@ -18,4 +20,6 @@ export default {
  EventsRoute,
  HomeRoute,
  JoinSPSHubRoute,
+ MissionAndVisionRoute,
+ TeamRoute,
 };

@@ -8,7 +8,17 @@ export default {
     {
       id: 1,
       name: 'about',
-      page: '/about'
+      page: '/about',
+      subpages: [
+        {
+          name: 'mission & vision',
+          page: '/about/mission-and-vision'
+        },
+        {
+          name: 'team',
+          page: '/about/team'
+        }
+      ]
     },
     {
       id: 2,

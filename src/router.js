@@ -5,6 +5,8 @@ import ContactUsRoute from '~/pages/ContactUsRoute';
 import EventsRoute from '~/pages/EventsRoute';
 import HomeRoute from '~/pages/HomeRoute';
 import JoinSPSHubRoute from '~/pages/JoinSPSHubRoute';
+import MissionAndVisionRoute from '~/pages/MissionAndVisionRoute';
+import TeamRoute from '~/pages/TeamRoute';
 
 Vue.use(Router);
 
@@ -25,6 +27,16 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: AboutRoute
+    },
+    {
+      path: '/about/mission-and-vision',
+      name: 'mission-and-vision',
+      component: MissionAndVisionRoute
+    },
+    {
+      path: '/about/team',
+      name: 'team',
+      component: TeamRoute
     },
     {
       path: '/events',
