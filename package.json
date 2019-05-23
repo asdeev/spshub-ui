@@ -1,5 +1,5 @@
 {
-  "name": "spshub",
+  "name": "spshub-ui",
   "version": "1.0.0",
   "description": "SPSHub is an application developed for Somali professionals and students to find mentorship.",
   "main": "index.html",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/asdeev/spshub.git"
+    "url": "https://github.com/asdeev/spshub-ui.git"
   },
   "author": "Zaid Bhura",
   "license": "MIT",
