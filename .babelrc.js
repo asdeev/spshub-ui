@@ -5,7 +5,7 @@ module.exports = {
       {
         paths: [
           {
-            rootPathPrefix: '@',
+            rootPathPrefix: '~',
             rootPathSuffix: 'src'
           },
           {
@@ -16,5 +16,13 @@ module.exports = {
       }
     ]
   ],
-  presets: ['@babel/preset-env']
+  presets: [
+    [
+      '@babel/preset-env',
+      {
+        useBuiltIns: 'entry',
+        corejs: 3
+      }
+    ]
+  ]
 };
