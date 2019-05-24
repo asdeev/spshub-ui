@@ -2,7 +2,7 @@ version: 2 # use CircleCI 2.0
 jobs: # collection of steps
   build:
     docker:
-      - image: circleci/node:10.15.3-jessie
+      - image: circleci/node:10.15.3-jessi
     steps:
       - checkout
       - run:
