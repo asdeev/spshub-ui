@@ -2,14 +2,9 @@ version: 2 # use CircleCI 2.0
 jobs: # collection of steps
   build:
     docker:
-      - image: centos:centos7.6.1810
+      - image: circleci/node:10.15.3-jessie
     steps:
       - checkout
-      - run:
-          name: Install Node.js and npm
-          command: |
-            curl -sSL "https://nodejs.org/dist/v10.15.3/node-v10.15.3-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v10.15.3-linux-x64/bin/node
-            curl https://www.npmjs.com/install.sh | sudo bash
       - run:
           name: Check current version of node
           command: node -v
