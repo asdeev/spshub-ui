@@ -1,4 +1,4 @@
-## [![Build Status](https://circleci.com/gh/asdeev/spshub-ui/tree/master.svg?style=svg&circle-token=283eca03c1740c3cff6774a1a9e334020592b34a)](https://circleci.com/gh/asdeev/spshub-ui/tree/master)
+## [![CircleCI](https://circleci.com/gh/asdeev/spshub-ui.svg?style=svg&circle-token=283eca03c1740c3cff6774a1a9e334020592b34a)](https://circleci.com/gh/asdeev/spshub-ui)
 
 # Somali Professionals & Students Hub (SPSHub)
 
