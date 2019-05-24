@@ -1,4 +1,4 @@
-# Somali Professionals & Students Hub (SPSHub)
+# Somali Professionals & Students Hub (SPSHub) [![CircleCI](https://circleci.com/gh/asdeev/spshub-ui/tree/master.svg?style=svg&circle-token=283eca03c1740c3cff6774a1a9e334020592b34a)](https://circleci.com/gh/asdeev/spshub-ui/tree/master)
 
 SPSHub is an application developed for Somali professionals and students to find mentorship. The application has been developed with [Vue.js](https://vuejs.org/).
 
