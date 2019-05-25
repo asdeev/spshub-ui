@@ -36,7 +36,6 @@ jobs: # collection of steps
       - run:
           name: Build and push Docker image
           command: |
-            echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
-            docker build -t $DOCKER_USER/$DOCKER_IMAGE:$TAG .
+            docker build -t $DOCKER_USER/$DOCKER_IMAGE:0.1.$CIRCLE_BUILD_NUM .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
             docker push $DOCKER_USER/$DOCKER_IMAGE:$TAG
