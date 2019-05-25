@@ -17,7 +17,7 @@ jobs: # collection of steps
             - ./node_modules
       - run: # run unit tests
           name: Unit Tests
-          command: npm run test:unit
+          command: npm run test:unit:mocha
       # Commented section is TBD (add in integration + e2e tests as well)
       # - run: # run coverage report
       #     name: code-coverage
