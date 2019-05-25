@@ -15,10 +15,10 @@ jobs: # collection of steps
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      # Commented section is TBD (add in integration + e2e tests as well)
       - run: # run unit tests
           name: Unit Tests
           command: npm run test:unit:mocha
-      # Commented section is TBD (add in integration + e2e tests as well)
       # - run: # run coverage report
       #     name: code-coverage
       #     command: './node_modules/.bin/nyc report --reporter=text-lcov'
@@ -31,3 +31,4 @@ jobs: # collection of steps
       #     prefix: coverage
       # - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
       #     path: test-results.xml
+      - setup_remote_docker
