@@ -39,3 +39,4 @@ jobs: # collection of steps
             docker build -t $DOCKER_USER/$DOCKER_IMAGE:0.1.$CIRCLE_BUILD_NUM .
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
             docker push $DOCKER_USER/$DOCKER_IMAGE:$TAG
+      # test something
