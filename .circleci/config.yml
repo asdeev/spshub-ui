@@ -1,10 +1,33 @@
 version: 2 # use CircleCI 2.0
 jobs: # collection of steps
   build:
+    working_directory: ~/spshub # directory where steps will run
     docker:
-      - image: circleci/node:10.15.3-jessi
+      - image: circleci/node:10.15.3-jessie # use node image for build
     steps:
       - checkout
+      - restore_cache: # special step to restore dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
       - run:
-          name: Check current version of node
-          command: node -v
+          name: Install npm packages
+          command: npm install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run: # run unit tests
+          name: Unit Tests
+          command: npm run test:unit
+      # Commented section is TBD (add in integration + e2e tests as well)
+      # - run: # run coverage report
+      #     name: code-coverage
+      #     command: './node_modules/.bin/nyc report --reporter=text-lcov'
+      # - store_artifacts: # special step to save test results as as artifact
+      #     # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+      #     path: test-results.xml
+      #     prefix: tests
+      # - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+      #     path: coverage
+      #     prefix: coverage
+      # - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+      #     path: test-results.xml
