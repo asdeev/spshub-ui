@@ -2,7 +2,7 @@ import chai from 'chai';
 import chaiJestSnapshot from 'chai-jest-snapshot';
 
 // eslint-disable-next-line no-undef
-// global.performance = window.performance;
+global.performance = window.performance;
 
 chai.use(chaiJestSnapshot);
 

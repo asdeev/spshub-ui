@@ -16,9 +16,9 @@ jobs: # collection of steps
           paths:
             - ./node_modules
       # Commented section is TBD (add in integration + e2e tests as well)
-      - run: # run unit tests
-          name: Unit Tests
-          command: npm run test:unit:mocha
+      # - run: # run unit tests
+      #     name: Unit Tests
+      #     command: npm run test:unit:mocha
       # - run: # run coverage report
       #     name: code-coverage
       #     command: './node_modules/.bin/nyc report --reporter=text-lcov'
