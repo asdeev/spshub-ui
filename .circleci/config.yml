@@ -31,4 +31,12 @@ jobs: # collection of steps
       #     prefix: coverage
       # - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
       #     path: test-results.xml
-      - setup_remote_docker
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Build and push Docker image
+          command: |
+            echo 'export TAG=0.1.${CIRCLE_BUILD_NUM}' >> $BASH_ENV
+            docker build -t $DOCKER_USER/$DOCKER_IMAGE:$TAG .
+            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
+            docker push $DOCKER_USER/$DOCKER_IMAGE:$TAG
