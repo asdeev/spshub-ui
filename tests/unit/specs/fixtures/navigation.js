@@ -3,7 +3,7 @@ export default {
     {
       id: 0,
       name: 'home',
-      page: '/home'
+      page: '/'
     },
     {
       id: 1,
