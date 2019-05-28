@@ -3,7 +3,11 @@
   <v-app>
     <AppHeader :header="header"></AppHeader>
     <AppNavigation :navigation="navigation"></AppNavigation>
-    <router-view></router-view>
+    <v-container fluid>
+      <v-layout>
+        <v-flex><router-view></router-view></v-flex>
+      </v-layout>
+    </v-container>
     <AppFooter :footer="footer"></AppFooter>
   </v-app>
 </template>

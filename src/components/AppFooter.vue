@@ -1,6 +1,6 @@
 <template>
   <!-- vue:test -->
-  <v-footer height="auto">
+  <v-footer height="auto" inset>
     <v-card class="flex" flat tile>
       <v-card-title class="app-footer__social-media primary2">
         <strong class="app-footer__subheading subheading white--text">{{
