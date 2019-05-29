@@ -9,7 +9,6 @@ RUN npm run build:prod
 # Production deployment
 FROM nginx:stable-alpine as production
 RUN rm /etc/nginx/conf.d/default.conf
-RUN rm /etc/nginx/conf.d/examplessl.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 COPY /nginx /etc/nginx
 EXPOSE 80
