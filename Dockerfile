@@ -9,6 +9,6 @@ RUN npm run build:prod
 # Production deployment
 FROM nginx:stable-alpine as production
 COPY --from=build /app/dist /usr/share/nginx/html
-COPY /nginx /usr/share/nginx
+COPY /app/nginx /usr/share/nginx
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
