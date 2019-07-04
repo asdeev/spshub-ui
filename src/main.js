@@ -1,5 +1,6 @@
 // inject sass entry point for Parcel bundling
 import '#/styles/main.scss';
+import VeeValidate from 'vee-validate';
 // import Vue specific components
 import Vue from 'vue';
 import Vuetify from 'vuetify';
@@ -21,6 +22,8 @@ Vue.use(Vuetify, {
     info2: colors.lightGreen.darken1
   }
 });
+
+Vue.use(VeeValidate);
 
 new Vue({
   el: '#app',
