@@ -17,7 +17,7 @@
     "test:unit": "npm run test:unit:build && npm run test:unit:mocha",
     "test:unit:watch": "npm run test:unit:build && npm run test:unit:mocha:watch",
     "test:unit:update": "set CHAI_JEST_SNAPSHOT_UPDATE_ALL=true && npm run test:unit:build && npm run test:unit:mocha",
-    "test:unit:build": "pythoddn tests/component_mapper.py -c \"src/\" -l \"logs/\" -o \"tests/testMapRaw.js\" && parcel build tests/testMapRaw.js -d tests -o testMap.js",
+    "test:unit:build": "python tests/component_mapper.py -c \"src/\" -l \"logs/\" -o \"tests/testMapRaw.js\" && parcel build tests/testMapRaw.js -d tests -o testMap.js",
     "test:unit:mocha": "mocha tests/unit/**/*.spec.js -r @babel/register -r jsdom-global/register",
     "test:unit:mocha:watch": "mocha tests/unit/**/*.spec.js -r @babel/register -r jsdom-global/register --watch",
     "test:int": "mocha tests/int/**/*.spec.js -r @babel/register -r jsdom-global/register",
