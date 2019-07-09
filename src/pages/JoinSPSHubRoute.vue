@@ -5,8 +5,9 @@
       <v-flex>
         <v-form ref="form" class="form-container">
           <v-layout justify-space-between row>
-            <v-flex md5>
+            <v-flex md4>
               <v-text-field
+                class="field-spacing"
                 ref="firstName"
                 v-model="firstName"
                 v-validate="'required'"
@@ -16,8 +17,9 @@
                 required
               ></v-text-field>
             </v-flex>
-            <v-flex md5>
+            <v-flex md4>
               <v-text-field
+                class="field-spacing"
                 ref="lastName"
                 v-model="lastName"
                 v-validate="'required'"
@@ -27,10 +29,9 @@
                 required
               ></v-text-field>
             </v-flex>
-          </v-layout>
-          <v-layout justify-space-between row>
-            <v-flex md5>
+            <v-flex md4>
               <v-text-field
+                class="field-spacing"
                 ref="email"
                 v-model="email"
                 v-validate="'required'"
@@ -41,8 +42,23 @@
                 required
               ></v-text-field>
             </v-flex>
-            <v-flex md5>
+          </v-layout>
+          <v-layout justify-space-between row>
+            <v-flex md6>
               <v-text-field
+                class="field-spacing"
+                ref="school"
+                v-model="school"
+                v-validate="'required'"
+                :error-messages="errors.collect('school')"
+                label="School"
+                data-vv-name="school"
+                required
+              ></v-text-field>
+            </v-flex>
+            <v-flex md6>
+              <v-text-field
+                class="field-spacing"
                 ref="major"
                 v-model="major"
                 v-validate="'required'"
@@ -54,8 +70,9 @@
             </v-flex>
           </v-layout>
           <v-layout justify-space-between row>
-            <v-flex md5>
+            <v-flex md6>
               <v-text-field
+                class="field-spacing"
                 ref="companyOrSector"
                 v-model="companyOrSector"
                 v-validate="'required'"
@@ -65,8 +82,9 @@
                 required
               ></v-text-field>
             </v-flex>
-            <v-flex md5>
+            <v-flex md6>
               <v-text-field
+                class="field-spacing"
                 ref="designationOrRole"
                 v-model="designationOrRole"
                 v-validate="'required'"
@@ -78,6 +96,7 @@
             </v-flex>
           </v-layout>
           <v-textarea
+            class="field-spacing"
             ref="fieldChoice"
             v-model="fieldChoice"
             v-validate="'required|max:250'"
@@ -88,6 +107,7 @@
             counter="250"
           ></v-textarea>
           <v-textarea
+            class="field-spacing"
             ref="majorChallenges"
             v-model="majorChallenges"
             v-validate="'required|max:250'"
@@ -99,6 +119,7 @@
             counter="250"
           ></v-textarea>
           <v-textarea
+            class="field-spacing"
             ref="mentorAdvice"
             v-model="mentorAdvice"
             v-validate="'required|max:250'"
@@ -109,6 +130,7 @@
             counter="250"
           ></v-textarea>
           <v-textarea
+            class="field-spacing"
             ref="areasOfMentorship"
             v-model="areasOfMentorship"
             v-validate="'required|max:50'"
@@ -120,6 +142,7 @@
             counter="50"
           ></v-textarea>
           <v-textarea
+            class="field-spacing"
             ref="motivationForMentoring"
             v-model="motivationForMentoring"
             v-validate="'required|max:100'"
@@ -133,6 +156,7 @@
           <v-layout justify-start row>
             <v-flex md4>
               <v-text-field
+                class="field-spacing"
                 type="number"
                 ref="monthlyMentoringHours"
                 v-model="monthlyMentoringHours"
@@ -163,6 +187,7 @@ export default {
     firstName: '',
     lastName: '',
     email: '',
+    school: '',
     major: '',
     companyOrSector: '',
     designationOrRole: '',
@@ -185,6 +210,9 @@ export default {
         },
         email: {
           required: 'Email cannot be empty'
+        },
+        school: {
+          required: 'School cannot be empty'
         },
         major: {
           required: 'Major cannot be empty'
