@@ -15,8 +15,14 @@
       <v-btn
         class="app-header__join-button"
         color="info2 white--text"
-        @click="goToForm('https://forms.gle/fVeci2vcnDywayGR8')"
+        @click="goToForm('https://forms.gle/ZjTy3LHZV6g4su58A')"
         >{{ header.button2 }}&nbsp<i class="fas fa-chevron-right"></i
+      ></v-btn>
+      <v-btn
+        class="app-header__become-mentor-button"
+        color="info2 white--text"
+        @click="goToForm('https://forms.gle/fVeci2vcnDywayGR8')"
+        >{{ header.button3 }}&nbsp<i class="fas fa-chevron-right"></i
       ></v-btn>
     </v-card-title>
   </v-card>

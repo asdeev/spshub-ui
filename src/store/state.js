@@ -4,8 +4,10 @@ export default {
     title: 'Somali Professionals & Students Hub',
     button1: 'Contact Us',
     button1Link: '/contact-us',
-    button2: 'Join SPSHub Today',
-    button2Link: '/join-spshub'
+    button2: 'Join SPSHub Today!',
+    button2Link: '/join-spshub',
+    button3: 'Become a Mentor!',
+    button3Link: '/become-mentor'
   },
   navigation: {
     pages: [
