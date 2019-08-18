@@ -9,7 +9,7 @@
           <v-flex>
             <h2 class="display-3 font-weight-light">Vision</h2>
             <h4 class="display-1 font-italic">
-              Connected, Inspired, and Empowered, Somali Community
+              Connected, Inspired, and Empowered Somali Community
             </h4>
           </v-flex>
           <v-flex offset-md2 class="spacing-top">

@@ -44,7 +44,7 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-actions class="secondary2 pa-3 ">
-            <v-btn class="accent" @click="sendEmail(item.emailAddress)"
+            <v-btn class="accent" @click="sendEmail(emailAddress)"
               >Contact</v-btn
             >
           </v-card-actions>
@@ -61,30 +61,26 @@ export default {
     team: [
       {
         name: 'Nassir Kowdan',
-        profilePic: '/assets/images/profile-placeholder.jpg',
-        emailAddress: 'insert@domain.com'
+        profilePic: '/assets/images/profile-placeholder.jpg'
       },
       {
         name: 'Yasin Hundubay',
-        profilePic: '/assets/images/profile-placeholder.jpg',
-        emailAddress: 'insert@domain.com'
+        profilePic: '/assets/images/profile-placeholder.jpg'
       },
       {
-        name: 'Hussen Mohamud',
-        profilePic: '/assets/images/profile-placeholder.jpg',
-        emailAddress: 'insert@domain.com'
+        name: 'Hussein Mohamud',
+        profilePic: '/assets/images/profile-placeholder.jpg'
       },
       {
         name: 'Abdulqadir Diriye',
-        profilePic: '/assets/images/profile-placeholder.jpg',
-        emailAddress: 'insert@domain.com'
+        profilePic: '/assets/images/profile-placeholder.jpg'
       },
       {
         name: 'Hassan Bashir',
-        profilePic: '/assets/images/profile-placeholder.jpg',
-        emailAddress: 'insert@domain.com'
+        profilePic: '/assets/images/profile-placeholder.jpg'
       }
-    ]
+    ],
+    emailAddress: 'spshub.mentorship@gmail.com'
   }),
   methods: {
     sendEmail(emailAddress) {
