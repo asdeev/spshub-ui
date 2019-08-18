@@ -23,3 +23,11 @@
   height: 17em;
   width: 30em;
 }
+
+#app
+  > div.application--wrap
+  > div.v-card.v-card--flat.v-sheet.v-sheet--tile.theme--light
+  > div
+  > div.app-header__title.display-1.font-italic.white--text {
+  font-family: 'Aclonica' !important;
+}
