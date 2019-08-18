@@ -23,7 +23,9 @@
           </v-card-title>
           <v-divider light></v-divider>
           <v-card-actions class="secondary1 pa-3">
-            <v-btn class="accent">Contact</v-btn>
+            <v-btn class="accent" @click="sendEmail(emailAddress)"
+              >Contact</v-btn
+            >
           </v-card-actions>
         </v-card>
         <v-card
