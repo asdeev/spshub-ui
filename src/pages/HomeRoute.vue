@@ -29,7 +29,6 @@
              
             </h2>
           </v-flex>
-        </v-layout>
       </v-flex>
       <v-flex md4>
         <v-img
