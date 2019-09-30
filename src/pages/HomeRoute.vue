@@ -13,19 +13,17 @@
                Website Under Construction
             </h4>
           </v-flex>
-          <v-flex >
-            <br>
-            <h2 class="display-3 font-weight-light" style="color:green">Join Us:</h2>
-          </v-flex>
+
           <v-flex offset-md1 class="spacing-top">
             <h2>
           <p>
-          <a href ="https://docs.google.com/forms/d/e/1FAIpQLSd3vE6_d8QhskuTtvRM2Dt5ZmH4rUUhMV9iNZQWuVKL2JGZXQ/viewform">Became a Mentee/Mentor</a>
+            Please joint us for the first Anual Somali Professionals  & Students Conference
+          <a href ="https://www.eventbrite.com/e/the-power-of-mentoring-and-networking-tickets-73090701255?fbclid=IwAR1XfV6jjOXOoVgAOXVWATpyktmCYO-CvpZaDk8BNQTRaqKAhafyaGo2cLs">
+             click here to register for the event
+            </a>
           </p>
           <p></p>
-          <p>
-            <a href ="https://docs.google.com/forms/d/e/1FAIpQLSdIuFJY8PVekGp9r0DPNnLD_eSXiq3iyEBaLW4Io7C1yn_rKA/viewform">Become a Mentor</a> 
-          </p>
+
              
             </h2>
           </v-flex>
