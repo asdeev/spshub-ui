@@ -6,6 +6,7 @@ SPSHub is an application developed for Somali professionals and students to find
 
 ## Installation
 
+
 Use npm bundled with [Node.js](https://nodejs.org/en/) to install product-page dependencies once downloaded.
 
 ```bash
