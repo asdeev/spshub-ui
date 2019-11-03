@@ -7,6 +7,9 @@ import HomeRoute from '~/pages/HomeRoute';
 import JoinSPSHubRoute from '~/pages/JoinSPSHubRoute';
 import MissionAndVisionRoute from '~/pages/MissionAndVisionRoute';
 import TeamRoute from '~/pages/TeamRoute';
+import Resources from '~/pages/ResourcesRoute';
+import MemberProfileRoute from '~/pages/MemberProfileRoute';
+import EventDetailsRoute from  '~/pages/EventDetailsRoute';
 
 Vue.use(Router);
 
@@ -33,8 +36,9 @@ export default new Router({
       name: 'team',
       component: TeamRoute
     },
+    
     {
-      path: '/events',
+      path: '/EventsRoute',
       name: 'events',
       component: EventsRoute
     },
@@ -47,6 +51,25 @@ export default new Router({
       path: '/join-spshub',
       name: 'join-spshub',
       component: JoinSPSHubRoute
+    },
+    {
+      path: '/Resources',
+      name: 'Resources',
+      component: Resources
+
+    },
+
+    {
+      path: '/MemberProfileRoute',
+      name: 'MemberProfileRoute',
+      component: MemberProfileRoute
+
+    }, 
+    {
+      path: '/EventDetailsRoute',
+      name: 'EventDetailsRoute',
+      component: EventDetailsRoute
     }
+
   ]
 });

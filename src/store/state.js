@@ -30,12 +30,17 @@ export default {
             page: '/about/team'
           }
         ]
-      }
-      // {
-      //   id: 2,
-      //   name: 'events',
-      //   page: '/events'
-      // }
+      },
+       {
+         id: 2,
+         name: 'Resources',
+         page: '/Resources'
+       },
+       {
+         id: 3,
+         name: 'events',
+         page: '/EventsRoute'
+       }
     ]
   },
   footer: {

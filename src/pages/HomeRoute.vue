@@ -5,7 +5,7 @@
           justify-center
           align-center
         >
-            <h2 class="display-4 indigo--text">Home Page Under Construction</h2>
+            <h2 class="display-2 indigo--text">Home Page Under Construction</h2>
         </v-layout>
     </v-content>
     
