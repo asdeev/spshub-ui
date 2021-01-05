@@ -32,7 +32,7 @@
   "author": "Zaid Bhura",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^4.16.4",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.3",
